@@ -82,20 +82,58 @@ The website serves both event administration and year-round discovery between st
 Students should be able to:
 
 - Create and maintain a profile.
-- Add education, skills, interests, work experience, and other relevant experience.
+- Upload a profile photo.
+- State their field of study and current year of study.
+- Add areas of professional and academic interest.
+- State their current study location and where they are originally from.
+- Add education, skills, work experience, and other relevant experience.
+- Add their golf handicap for tournament planning and team allocation.
 - Upload a CV and potentially other supporting documents.
 - View participating company profiles and opportunities.
 - Register for the event and manage relevant participation details.
+
+The student profile should therefore include at least:
+
+- Full name and profile photo.
+- Field of study.
+- Current year of study.
+- University or educational institution.
+- Study location.
+- Place of origin.
+- Areas of interest.
+- Skills and relevant experience.
+- Golf handicap.
+- CV and optional supporting documents.
 
 ### Company Accounts
 
 Companies should be able to:
 
 - Create and maintain a company profile.
+- Upload a company logo and relevant company image.
 - Present company information, employees, roles, and relevant opportunities.
+- Select up to five core qualities they look for in students and prospective employees.
+- Choose core qualities from suggested options or add their own custom qualities.
 - View and search student profiles.
 - Open student profiles and access documents that the student has chosen to share with verified companies.
 - Manage company representatives participating in the event.
+
+Each participating company representative should have a personal profile containing at least their name, role, profile photo, and golf handicap. The handicap is used for tournament administration and team allocation rather than recruitment matching.
+
+Suggested core qualities may include:
+
+- Analytical.
+- Collaborative.
+- Curious.
+- Initiative-taking.
+- Structured.
+- Commercially minded.
+- Adaptable.
+- Clear communicator.
+- Responsible.
+- Relationship-oriented.
+
+Custom and suggested qualities should use the same structured format so they can later support profile search, filtering, and matching. Students should be able to see which five qualities each company prioritizes.
 
 ### Access and Privacy
 
