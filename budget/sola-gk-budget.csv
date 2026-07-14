@@ -1,0 +1,15 @@
+Category,Cost item,Quantity,Unit cost NOK,Estimated total NOK,Status,Notes
+Venue,Fixed venue charge,1,17000,17000,Provided,"Confirm scope, terms and VAT"
+Golf,Green fees,72,900,64800,Provided,"Confirm minimum commitment and VAT"
+Food,Dinner/food,72,450,32400,Range provided,"Expected range NOK 400-500 per person"
+Food,On-course refreshments,72,100,7200,Estimate,"Water, coffee, snack"
+Evening,Dinner/afterparty room and AV,1,10000,10000,Estimate,"May be included in venue or catering"
+Prizes,Competition and main prizes,1,0,0,Sponsor supplied,"Non-cash prizes only; no event expense"
+Production,"Signs, badges, scorecards and stands",1,5000,5000,Estimate,"Confirm sponsor stand requirements"
+Media,Photographer/content,1,8000,8000,Estimate,Optional
+Compliance,"Insurance, first aid and permits",1,5000,5000,Estimate,"Confirm organizer and venue coverage"
+Digital,"Website, payment and administration",1,5000,5000,Estimate,"Excludes development labor"
+Operations,Event staff/volunteer expenses,1,6000,6000,Estimate,"Confirm staffing plan"
+Logistics,Local transport and miscellaneous,1,3000,3000,Estimate,"Planning allowance"
+Reserve,Contingency,1,16340,16340,Calculated,"10% of subtotal"
+TOTAL,Working total,,,179740,Calculated,"72 players; food at NOK 450"
