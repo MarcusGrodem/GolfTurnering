@@ -97,6 +97,51 @@ Fully English names, suitable if the event wants to signal international ambitio
 - The North Sea Networking Open
 - Stavanger Student Society Golf Classic
 
+## Golf-Themed Names (Non-Regional)
+
+Names built around golf language and traditions, with no direct tie to Stavanger. Easier to expand nationally later and stronger as standalone brands.
+
+- The Scramble Invitational
+- The Shotgun Classic
+- The Eagle Invitational
+- Birdies & Business
+- The Fairway Society
+- The Back Nine Open
+- The Front Nine Cup
+- The Albatross Open
+- The Mulligan Cup
+- The Handicap Invitational
+- The Pin & Pitch Open
+- The Green Jacket Classic
+- The Bogey Society
+- The Divot Invitational
+- The Ace Cup
+- The Chip Shot Classic
+- The Long Drive Open
+- The Clubhouse Invitational
+- The 18th Hole Society
+- The Approach Open
+- The Caddie Cup
+- The Tee Time Invitational
+- The Sunday Bag Open
+- The Links Society
+- The Persimmon Cup (nod to classic wooden clubs)
+
+## Student & Career-Themed (Non-Regional)
+
+Networking-forward names with no geographic anchor.
+
+- The Graduate Open
+- The Alumni Invitational
+- The Recruit Cup
+- The Career Fairway
+- The Talent Open
+- The Next Round Invitational
+- The First Job Open
+- The Class of Cup
+- The Ambition Invitational
+- The Handshake Classic
+
 ## Naming Considerations
 
 Points to weigh before committing to a name:
