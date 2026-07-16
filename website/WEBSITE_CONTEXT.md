@@ -204,22 +204,262 @@ A sensible first release should focus on:
 8. Organizer administration and exports.
 9. Anonymous company favorites used as a weighted input to scramble team allocation.
 
-Advanced automated matching, live scoring, messaging, and year-round job listings can be considered after the core workflow is proven.
+Direct messaging, a custom-built scoring system, and year-round job listings can be considered after the core workflow is proven. Automated scramble-team proposals are required in the first release.
+
+## Confirmed Participation and Payment Model
+
+1. **Student eligibility:** Active students and people who graduated within the previous two years can participate. A connection to Stavanger is not required.
+2. **Admission:** Participation should combine invitations with online registration. An eligible student with a complete profile, mandatory CV, available student capacity, and successfully completed payment should receive immediate confirmation without manual organizer approval. The organizer can still manually manage invitations, capacity, duplicates, and exceptional cases.
+3. **Capacity allocation:** The working capacity is 72 players: approximately 54 student places and 18 company-representative places. Final capacity and reserved numbers remain configurable per event.
+4. **Payments:** Students should pay their participation fee directly through the website. Companies should receive sponsorship-package invoices outside the website rather than completing a consumer checkout.
+5. **Team allocation:** The platform should automatically propose balanced scramble teams using handicap, the desired student/company distribution, and anonymous company favorites. The organizer must review and approve teams before they are published.
+6. **Recent graduates:** A participant is considered a recent graduate for up to two years after completing their education.
+7. **Eligibility verification:** Formal proof of active-student or recent-graduate status is not required. Applicants should declare their current study or graduation details, and the organizer retains the ability to review suspicious or inaccurate registrations.
+8. **Company access period:** Verified companies can access participating student profiles and shared CVs until one week after the tournament ends. Access must then be revoked automatically. Authorized company users may view and download shared CVs during this period. Because downloaded copies cannot technically be revoked, companies must accept purpose limitation, retention, deletion, and non-sharing terms before access; downloads should be logged and clearly attributed where practical.
+9. **Refund policy:** Cancellation, no-show, postponement, weather, and refund rules will be decided later and must be published before payments open.
+10. **Sponsorship places:** Sponsorship packages should include a fixed standard number of player places. Organizers must be able to override the number for an individually negotiated package without changing the published standard package.
+11. **Team composition:** Team size should remain flexible until actual registration numbers are known. Allocation should use three- or four-player teams as required while targeting approximately 25% company representatives and 75% students across the field. A four-player team would normally contain one company representative and three students, but exact composition is not guaranteed.
+12. **Players without an official handicap:** They may participate and should use handicap 54 for team allocation and scoring calculations, subject to final confirmation of the competition rules with Sola GK.
+13. **Waiting list:** Once the 54 student places are filled, otherwise eligible students should automatically join a waiting list without paying. Payment is requested only when a place is offered and accepted.
+14. **Included attendance:** A confirmed player place includes the golf tournament, dinner, and afterparty as one package. Players do not select or purchase these components separately, although attendance and dietary details may still be collected for planning.
+15. **Minimum age:** All participants must be at least 18 years old on the event date because the package includes the afterparty and may involve alcohol service.
+16. **Team publication:** Approved scramble teams and starting holes should be published a few days before the tournament. The exact publication deadline remains to be set in the event schedule.
+17. **Allocation priority:** The team algorithm must prioritize balanced total team handicap before applying anonymous company favorites. Favorites are a secondary preference and must not materially undermine sporting balance.
+18. **Student fee:** The final fee will be determined later from the approved event budget. It must be configurable per yearly event rather than hard-coded in the website.
+19. **Student package:** The student fee includes green fee, food, dinner, afterparty, and any transport the organizer chooses to include in the event package. Golf-club or other equipment rental is excluded and handled separately.
+20. **Transport:** Participants are expected to arrange their own transport to and from Sola GK. No shared transport is currently included in the event package.
+21. **Rental clubs:** Students can indicate that they need rental clubs during registration. The organizer should include this need in the Sola GK export, while availability, collection, and payment are handled directly by Sola GK.
+22. **Dietary information:** Every participant must answer the dietary-requirements and allergy questions, including explicitly selecting "none" when they have no requirements. Access must be restricted to organizers and relevant food-service personnel.
+23. **Check-in:** A participant list in the admin area is sufficient. The organizer will manually mark arrivals; participant-facing QR codes or self-service digital check-in are not required.
+
+The company-favorite limit, waiting-list offer deadline, post-event retention of privately stored CVs, authority for final scramble and handicap rules, and exact urgent-notification channels are intentionally deferred decisions. They must be settled before the related workflows are implemented or registration opens.
+
+### Sponsorship Capacity and Course Activities
+
+- The event should accept as many suitable sponsors as practical rather than setting a fixed sponsor count.
+- Sponsors from the same industry may participate at the same time; no sponsorship package provides automatic industry exclusivity.
+- Sponsorship does not automatically include a player place; places are controlled by the selected package or individual agreement and the overall 18-place company allocation.
+- All approved sponsors receive the same standard level of digital logo visibility on the homepage sponsor strip and sponsor page. Package price should not automatically change logo size or prominence.
+- Physical sponsor stands and course activities remain limited by venue capacity, pace of play, safety, and Sola GK approval.
+- A sponsor may request a stand, branded activity, or competition at a specific hole when included in its agreement.
+- Specific-hole allocation must be approved and managed by the organizer in coordination with Sola GK; sponsors cannot claim a hole directly through self-service booking.
+- Sponsorship packages and prices should not be published as self-service products on the website. Interested companies should use the partnership call to action and contact the organizer for an individual offer.
+- A company profile and its users may be prepared in advance, but sponsor access to student profiles and CVs must remain disabled until the organizer records the sponsorship agreement as paid.
+
+### Recommended Student Payment Approach
+
+Vipps MobilePay ePayment is the preferred option for student payments, subject to commercial onboarding and confirmation of the legal payment recipient. It supports initiating a payment, redirecting the user to complete it, retrieving status, capturing the payment, and issuing full or partial refunds.
+
+The integration must:
+
+- Create payments server-side with unique, idempotent references.
+- Keep API credentials out of the browser and source control.
+- Verify payment state through the API and authenticated webhooks rather than trusting the browser redirect.
+- Confirm a tournament place only according to the agreed admission and payment rules.
+- Handle abandoned, failed, duplicate, expired, cancelled, and refunded payments.
+- Store the payment reference and necessary accounting status without storing payment-card details.
+- Automatically send the student a payment and place-confirmation email after verified successful payment.
+- Be tested against the Vipps MobilePay test environment before production use.
+
+Sponsor contracts, invoices, payment follow-up, and receipts should be handled manually by the organizer outside the website. The admin dashboard only needs a controlled status for recording agreement and payment state and enabling access.
+
+Official implementation guidance: [Vipps MobilePay ePayment API quick start](https://developer.vippsmobilepay.com/docs/APIs/epayment-api/quick-start/).
+
+### Recommended Legal Structure
+
+The preferred direction, pending final confirmation by the organizer, is to establish a non-profit association as the event organizer, provided the event continues to operate without a profit motive. A Norwegian association is an organization created by its members around an agreed purpose. It should be formed with a founding meeting and document, bylaws, a board, and clear signing authority, then registered in the Norwegian Register of Legal Entities to obtain an organization number.
+
+This would give the recurring event a separate organizational identity and a clearer basis for a bank account, venue and sponsor agreements, company invoicing, Vipps MobilePay onboarding, bookkeeping, and responsibility for personal data. Payments and contracts should not be handled privately by the organizer once the association is operational.
+
+Association status does not automatically make every activity tax-free or exempt it from VAT, accounting, or reporting obligations. The actual purpose, income, sponsorship arrangements, and recurring economic activity must be assessed before sales and sponsorship packages open. Official starting points: [Brønnøysund Registers: registering an association](https://www.brreg.no/lag-og-foreninger/registrere-lag-eller-forening/) and [Norwegian Tax Administration: tax-exempt organizations](https://www.skatteetaten.no/bedrift-og-organisasjon/rapportering-og-bransjer/bransjer-med-egne-regler/frivillige-og-ideelle-organisasjoner/skattefrie-organisasjoner/).
+
+### Tournament Scoring System
+
+Sola GK's existing tournament system should be the source of truth for scoring and results. GolfBox is the likely system and is designed for tournament administration, including entries, start lists, real-time scoring, standings, result lists, and winner lists. This must be confirmed directly with Sola GK.
+
+The website should initially integrate results at one of these levels:
+
+1. **Reliable baseline:** Link directly from the event-day dashboard to the specific GolfBox live-scoring and results page.
+2. **Preferred presentation:** Embed the official public GolfBox live-scoring page if GolfBox and Sola GK permit framing and it works securely and responsively.
+3. **Deeper integration:** Import or synchronize structured tournament data only if GolfBox provides an approved API, export, or partner integration for this use.
+
+No undocumented scraping or duplicate scoring system should be used. The website can retain an approved final result export for the yearly archive. The supported integration method, result URL, data ownership, and organizer permissions must be confirmed with Sola GK before development.
+
+### Event-Day Presentation
+
+- Participant name badges are not required.
+- Dinner seating is unassigned; participants choose their own seats.
+- The organizer can build and publish a structured event program in the admin area. Each item should support a time, title, location, short description, ordering, and current status or update.
+- The result experience should expose both gross and net team standings from GolfBox when the available GolfBox result view or approved integration supports them.
+- Winners of closest to the pin, longest drive, and straightest drive should be published on the event result page and retained in the yearly archive.
+- The organizer must be able to enter or correct side-competition winners manually if GolfBox does not supply those results.
+
+## Confirmed Account Administration
+
+- The first release requires exactly one organizer administrator account and an admin dashboard. Additional organizer roles and admin invitations are not required.
+- The organizer will create and manage company access rather than delegating user invitations to a company administrator.
+- Company users must not be able to create, invite, remove, or approve other company users.
+- Each authorized company employee must have a personal login. Shared company credentials are not permitted.
+- Every organizer-approved personal user belonging to a participating sponsor may search student profiles and view or download shared CVs during the defined access period. Access is not limited to sponsors with player places.
+- Every such user must individually accept the company-access and document-use terms before access is enabled.
+- The organizer admin must be able to create, activate, suspend, edit, and remove company users and associate them with the correct company profile.
+- Administrative actions affecting access to student profiles, CVs, payments, or team allocation should be logged.
+- Company users can edit their own company profile and opportunity links through a simple, guided interface. Company administration must not expose unrelated technical or event-management settings.
+- Jobs, internships, and graduate opportunities should primarily be represented by a short title, opportunity type, optional summary, and external link to the company's official listing rather than recreating a complete applicant-tracking system.
+- Approved company users may publish company-profile changes and opportunity links directly without per-change organizer approval. The organizer must still be able to review, unpublish, edit, or remove inappropriate or outdated content and suspend publishing access.
+- Confirmed students may continue editing their profile and replacing their CV through the tournament period. Relevant changes should be reflected immediately for authorized company users and recorded where appropriate.
+
+### Authentication
+
+- Students, company users, and the organizer administrator sign in with an email address and password.
+- Email ownership must be verified before an account becomes active.
+- Secure password reset, rate limiting, session expiration, and protection against credential stuffing are required.
+- Passwords must be processed by the authentication provider using an appropriate one-way password hash and must never be stored or logged in plain text.
+- Multi-factor authentication is not required for students, company users, or the single administrator in the first release. It should remain available as a later security improvement, especially for administrator and CV-access roles.
+
+### Student Account and Registration Flow
+
+The registration flow should create a pending student account before payment so the required profile and CV can be securely associated with the correct person:
+
+1. The student enters an email address, which becomes the username, and creates a password.
+2. The student verifies the email address.
+3. The student provides a telephone number and completes all mandatory profile, eligibility, event, dietary, consent, and CV fields.
+4. The system checks age, profile completeness, student capacity, and waiting-list state.
+5. When capacity is available, the student completes Vipps payment.
+6. A verified successful payment activates the confirmed participant status immediately and triggers the confirmation email.
+
+If student capacity is already full, the completed account joins the unpaid waiting list and does not proceed to payment. The organizer can retrieve the registered student's email address and telephone number through the access-controlled admin view and appropriate exports. Company accounts are created manually by the organizer.
+
+### Required Admin Exports
+
+The admin dashboard must export operational data in Excel and/or CSV format for Sola GK and event operations. Export options must cover:
+
+- Participant identity and contact information required for administration.
+- Student and company allocation.
+- Golf handicap and no-official-handicap status.
+- Approved teams and starting holes.
+- Dietary requirements and allergies in a separately access-controlled export.
+- Rental-club requirements.
+- Attendance and manual check-in status.
+- Payment and sponsorship status where required for internal reconciliation.
+
+Exports must include only the fields needed for their stated recipient and purpose. CVs, transcripts, company favorites, and recruitment notes must never appear in general Sola GK or event-operation exports.
+
+### Editable Content
+
+The admin dashboard should function as a constrained content-management interface. The organizer can edit changing operational content without developer assistance, including:
+
+- Event date, venue, registration period, capacity, price, and event status.
+- Homepage announcements, countdown target, and calls to action.
+- Tournament information, practical details, program, and event-day contact information.
+- Sponsors, logos, links, and sponsor-strip order.
+- Contact-page details.
+- Standard notification and email-template content.
+- Historical event summary, approved results links, and approved gallery content.
+
+The organizer should edit structured fields and predefined sections, not arbitrary page layouts, navigation architecture, security rules, or visual-system code.
+
+### Email Templates
+
+The admin area must provide reusable Norwegian and English templates for registration and payment confirmation, waiting-list status and place offers, incomplete-profile reminders, payment reminders where applicable, team and starting-hole publication, practical pre-event information, urgent changes, and post-event follow-up. Automated sends must record delivery status and avoid duplicate messages.
+
+### Hosting and Backups
+
+- Application data, private CVs, profile images, and backups must be hosted with appropriate providers in the EU/EEA.
+- Private documents must use access-controlled object storage and must not be exposed through permanent public URLs.
+- Automated encrypted backups, restoration procedures, retention periods, and periodic restore testing are required.
+- Hosting, storage, authentication, email, analytics, and backup vendors must be documented and covered by appropriate data-processing terms before production launch.
+
+### Analytics
+
+Use limited, privacy-conscious analytics to measure public website visits, registration-funnel completion, confirmed registrations, and aggregate views of company profiles and opportunity links. Do not expose individual student browsing behavior to companies, and do not use CV access logs for marketing analytics. Prefer an EU/EEA-hosted, cookieless configuration where practical; any non-essential tracking must follow the required consent rules.
+
+### Event Email Domain
+
+After the event name and domain are selected, automated messages and public contact should preferably use an event-domain address such as `kontakt@[event-domain]`. The domain must be configured with SPF, DKIM, and DMARC for reliable delivery. The organizer's Gmail address remains the temporary public contact until the event-domain mailbox is ready.
+
+## Required First Release
+
+The first tournament release must include the complete core platform rather than postponing major workflows. It requires:
+
+1. Student registration, personal accounts, mandatory profiles, CV upload, and Vipps payment.
+2. Company profiles and organizer-managed personal accounts for company employees.
+3. Student discovery of participating companies and their prioritized qualities.
+4. Company search and filtering of participating students, including authorized CV viewing and download for all approved sponsor users.
+5. Private student bookmarks and anonymous company favorites.
+6. Automated scramble-team proposals using handicap, participant ratios, and company favorite weighting, followed by organizer approval.
+7. Capacity management, immediate confirmation, and an unpaid student waiting list.
+8. Organizer administration for users, content, payments, capacity, profiles, access, exports, and team management.
+9. Tournament, program, sponsor, contact, profile, event-day, and historical archive pages.
+10. GolfBox result linking or an approved embedded result view.
+11. Norwegian and English interface support.
+12. Company publication of specific job openings, internships, graduate roles, and other relevant opportunities during the active event period.
+
+### Mandatory Student Profile
+
+Before a student can pay and receive a confirmed place, the profile must contain:
+
+- Full name.
+- Profile photo.
+- University or educational institution and study location.
+- Field of study and current year of study, or graduation details for recent graduates.
+- Place of origin.
+- Areas of interest.
+- Relevant skills and experience.
+- Official golf handicap or the no-official-handicap selection, which uses 54.
+- CV upload.
+- Required privacy, event, and document-sharing acknowledgements.
 
 ## Confirmed Product Decisions
 
 1. **Working name:** Use `[Event Name]` as a placeholder. The final name will be selected later.
 2. **Primary student action:** Create a student profile, explore participating companies, and understand what each company does and looks for in students.
 3. **Primary company action:** Browse participating students and privately favorite interesting candidates. Favorites anonymously increase the chance of sharing a scramble team.
-4. **First-release scope:** Not yet decided. The initial product scope above is a working proposal, not a final commitment.
+4. **First-release scope:** The complete core platform defined in Required First Release must be available for the first tournament.
 5. **Active period:** The website only needs to be operational before and during the tournament. Exact opening and closing dates remain to be decided.
 6. **Yearly events and archive:** Each tournament should have its own event page. Information from previous tournaments should be retained in a historical archive and database where legally permitted.
 7. **Active tournaments:** The platform only needs to support one active tournament at a time for now.
 8. **Public information:** Visitors without an account should be able to see general event information, the schedule, participating companies, sponsors, and appropriate historical event information. Student profiles, private participant details, favorites, CVs, and supporting documents must never be public.
 9. **Languages:** Users should be able to switch between Norwegian and English using a standard language selector. User-provided profile content does not need automatic translation in the first release.
-10. **Accounts between events:** Profiles and accounts should be retained for reuse in later tournaments. Returning users should review and confirm their information before registering for a new event.
+10. **Accounts between events:** Student profiles and accounts should be retained for possible reuse in later tournaments. Returning students must review and confirm their information before registering for a new event. Company accounts and editable company profiles are recreated for each yearly event.
 
 Historical participant data must not automatically become a public participant directory. Retention of personal profiles, CVs, documents, and company access must be covered by clear consent, retention periods, deletion rights, and applicable data-protection requirements. Public historical pages should use an explicitly approved subset of event information.
+
+## Confirmed Privacy and Participant Visibility
+
+1. **Sponsor consent:** A student gives one explicit consent covering profile and CV access by all verified sponsor companies, rather than selecting companies individually. The consent screen must identify the eligible recipient group, purpose, access period, download possibility, and consequences of withdrawal before the student confirms.
+2. **Downloaded CV retention:** The platform revokes sponsor access one week after the tournament, but a company may retain a CV it downloaded for a legitimate, stated recruitment process. The student must be informed that downloaded copies cannot be remotely deleted. The receiving company becomes responsible for its copy and must handle retention, security, purpose limitation, data-subject requests, and deletion under its own privacy obligations and the accepted sponsor terms. Unlimited or unrelated reuse is not permitted; an exact default retention expectation remains to be defined.
+3. **Student participant directory:** Signed-in participating students may see a limited directory of other participants. It may show name, profile photo, field and year of study, institution or study location, place of origin, and areas of interest. It must not expose CVs, transcripts, supporting documents, contact details, company favorites, private notes, payment information, or other restricted fields.
+4. **Photography:** Registration must include a separate, clearly presented photography and publication choice. The implementation and event process must record the choice and allow the organizer to identify participants who have not agreed before publishing identifiable images.
+5. **Self-service deletion:** Students must be able to request or initiate deletion of their account, profile, photo, and uploaded documents. The system may retain only records that must be kept for accounting, legal claims, fraud prevention, or other documented obligations, and these retained records must no longer remain available as an active profile.
+
+Fields such as study program, interests, and place of origin are still personal data when connected to an identifiable participant, even though they are less sensitive than a CV or transcript. They must therefore remain behind participant login and be covered by the privacy notice.
+
+## Confirmed Discovery Timing
+
+1. Students with a pending account may browse participating company profiles before paying or receiving a confirmed place.
+2. Specific job and internship links and the ability to favorite companies are available only after the student's payment and participation are confirmed.
+3. A paid and verified sponsor's authorized users can see a student's shared profile and CV as soon as that student's payment and participation are confirmed; access does not wait for registration to close.
+4. Company user accounts and editable company profiles are event-specific and should not remain active for reuse the following year. The organizer creates new company accounts and obtains updated profile information for each event. An approved, limited public record of previous participating companies may still remain in the historical event archive.
+5. A dedicated global emergency switch for all company access is not required in the first admin interface. The organizer must still be able to suspend individual company users and companies, and ordinary incident-response controls must remain available at the system or authentication-provider level.
+
+## Confirmed Contact and Matching Rules
+
+1. Verified sponsor users with active access may see the confirmed student's email address and telephone number in addition to the shared profile and CV. Students must be informed of this disclosure before confirming participation.
+2. Signed-in students may see the attending company representatives' approved professional contact information and LinkedIn links. Representatives must control and confirm which details are published.
+3. Company search should remain simple because the initial participant pool is limited. Useful filters include field of study, year of study or graduation year, institution or study location, areas of interest, relevant skills or experience, and place of origin. The interface should not present a large or overly complex filter system for 54 students.
+4. Students are not required to select five personal qualities. The five-quality structure applies only to what companies say they prioritize.
+5. Student views, bookmarks, and favorites of company profiles are private. Companies must not be shown which individual students viewed or favorited them, and this behavior must not be used as a hidden recruitment score.
+
+## Confirmed Document and Opportunity Rules
+
+1. Student CVs must be uploaded as PDF files.
+2. A transcript is optional and must be stored and protected under the same rules as the CV.
+3. The student profile may include one optional **Other document** upload for a relevant certificate, reference, application letter, or similar supporting material. It should also use PDF unless a later requirement justifies another format.
+4. Companies may create their own five prioritized core qualities rather than being limited to organizer-approved suggestions. The interface can still suggest existing qualities and normalize obvious duplicates for consistent display and filtering.
+5. Job and internship links do not expire or become hidden automatically at the event date or listed application deadline. Company users and the organizer can remove or unpublish outdated links manually. The interface should still support an optional application deadline and clearly display when that date has passed.
+
+File-size limits, malware scanning, replacement behavior, and final retention periods must be defined during technical design. Private documents must never be attached directly to notification emails.
 
 ## Confirmed Design Direction
 
