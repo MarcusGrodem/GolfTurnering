@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The website supports the Stavanger Student Golf Invitational before, during, and between yearly events. It should serve two primary user groups: students and participating companies.
+The website supports the event before and during each yearly tournament. The final event and website name has not been selected; use `[Event Name]` as a placeholder until it is decided. The website should serve two primary user groups: students and participating companies.
 
 The platform has two main purposes:
 
@@ -49,6 +49,7 @@ Companies should be able to:
 - View and search student profiles.
 - Filter students using relevant structured profile information.
 - Open student profiles.
+- Privately mark participating students as favorites.
 - Access CVs and documents that students have deliberately shared with verified companies.
 - Manage the company representatives participating in the tournament.
 
@@ -141,6 +142,8 @@ Verified company users should be able to browse and search students using approp
 
 The exact filters and whether students can browse other student profiles remain open decisions.
 
+Company favorites must be anonymous to students and other companies. A favorite should only act as a preference signal for team allocation, increasing the chance that a company representative and the student are placed on the same scramble team. It must not guarantee a pairing, expose recruitment interest, or override tournament constraints such as team size and handicap balance. The organizer's access to favorite data and the exact weighting remain to be decided.
+
 ## Event Features
 
 The website should eventually support:
@@ -199,8 +202,82 @@ A sensible first release should focus on:
 6. Private, consent-based CV upload and access.
 7. Event registration and payment status.
 8. Organizer administration and exports.
+9. Anonymous company favorites used as a weighted input to scramble team allocation.
 
 Advanced automated matching, live scoring, messaging, and year-round job listings can be considered after the core workflow is proven.
+
+## Confirmed Product Decisions
+
+1. **Working name:** Use `[Event Name]` as a placeholder. The final name will be selected later.
+2. **Primary student action:** Create a student profile, explore participating companies, and understand what each company does and looks for in students.
+3. **Primary company action:** Browse participating students and privately favorite interesting candidates. Favorites anonymously increase the chance of sharing a scramble team.
+4. **First-release scope:** Not yet decided. The initial product scope above is a working proposal, not a final commitment.
+5. **Active period:** The website only needs to be operational before and during the tournament. Exact opening and closing dates remain to be decided.
+6. **Yearly events and archive:** Each tournament should have its own event page. Information from previous tournaments should be retained in a historical archive and database where legally permitted.
+7. **Active tournaments:** The platform only needs to support one active tournament at a time for now.
+8. **Public information:** Visitors without an account should be able to see general event information, the schedule, participating companies, sponsors, and appropriate historical event information. Student profiles, private participant details, favorites, CVs, and supporting documents must never be public.
+9. **Languages:** Users should be able to switch between Norwegian and English using a standard language selector. User-provided profile content does not need automatic translation in the first release.
+10. **Accounts between events:** Profiles and accounts should be retained for reuse in later tournaments. Returning users should review and confirm their information before registering for a new event.
+
+Historical participant data must not automatically become a public participant directory. Retention of personal profiles, CVs, documents, and company access must be covered by clear consent, retention periods, deletion rights, and applicable data-protection requirements. Public historical pages should use an explicitly approved subset of event information.
+
+## Confirmed Design Direction
+
+1. **Brand material:** No logo, color palette, typography, or other visual identity exists yet. These should be created after the final event name is selected.
+2. **Visual balance:** The identity should combine golf and professional networking, weighted approximately 60% toward golf and 40% toward networking.
+3. **Tone:** The website should feel fairly formal and credible while making it clear that the event is social and primarily intended to be fun.
+4. **Visual reference:** Review [sologsving.no](https://sologsving.no/) and the `sologsving` Instagram account together with the organizer when design work begins. Use the website as functional inspiration for its event countdown, sponsor-logo strip, and partnership call to action. Do not copy its wording, layout, branding, imagery, or visual identity.
+5. **Styles to avoid:** There is no specific prohibited style, but the result must not look generically AI-generated or "vibecoded." It should have a deliberate identity, consistent visual system, relevant content, and carefully designed responsive states.
+
+Before a visual direction is selected, the AI design process must present several genuinely distinct color-palette options. Each option should include named color values, typography suggestions, accessibility considerations, and small examples showing the palette applied to relevant website components. The organizer must select or refine a direction before the complete interface is designed.
+
+Initial palette options are documented in [COLOR_PALETTES.md](COLOR_PALETTES.md).
+
+6. **Photography:** A future image gallery from Sola GK is expected to provide course imagery. The available images, formats, quality, and permitted uses must be confirmed before design begins. Additional event photography can be added after the first tournament.
+7. **Image administration:** The organizer is responsible for approving and administering image use. This does not by itself transfer copyright or provide participant consent; the organizer must obtain appropriate licenses, photographer agreements, venue permission, and participant consent where required.
+8. **Sponsor visibility:** Sponsors should appear on a dedicated sponsor page and in a visible section on the homepage. Inspired by the function on `sologsving.no`, the homepage should use a slowly moving horizontal sponsor-logo strip. The implementation must have its own layout and styling, support manual navigation, pause when appropriate, respect reduced-motion preferences, and keep every sponsor accessible without relying on animation.
+9. **Dark mode:** Dark mode is not required.
+10. **Accessibility:** No additional accessibility requirements have been identified beyond established good practice and the agreed WCAG baseline.
+11. **Responsive design:** The website does not need to be mobile-first, but every core workflow must work well on both mobile and desktop. Event-day views should be especially easy to use on a phone.
+12. **Event-day priorities:** Participants must be able to quickly find their start time, scramble team, starting hole, event program, results, and organizer contact information.
+
+## Confirmed Navigation Decisions
+
+1. **Primary sections:** Shared navigation should include Tournament, Program, Sponsors, Contact, and My Profile. Additional navigation should change according to whether the signed-in user is a student or company user.
+2. **Dashboards:** Students and companies should have separate dashboards tailored to their tasks and available information.
+3. **Shared pages:** Both user types should have access to Tournament, Program, Sponsors, Contact, and My Profile. The content and available actions within My Profile will be role-specific.
+4. **Separate workflows:** Event information, registration, profile management, and discovery should be separate, clearly labeled workflows. This is a provisional decision and should be validated when wireframes are reviewed.
+5. **Homepage states:** The homepage should change according to the event phase. Before registration it should show the event concept, date, venue, participating companies, and registration opening date. While registration is open it should prioritize registration and remaining capacity. When full it should show the waiting-list option and practical event information. After the tournament it should show results, approved photos, sponsors, and a link to the event archive. These are working recommendations.
+6. **Student bookmarks:** Students should be able to privately save participating companies as favorites. Student favorites are for personal organization and must be kept separate from company favorites used by the team-allocation algorithm.
+7. **Contact:** Direct messaging is not required. Companies and students can connect through approved contact details, email, LinkedIn, or in person at the event. Users must control whether their contact details are visible.
+8. **Notifications:** Use a combination of in-app and external notifications. The recommended baseline is an in-app notification center plus email for registration, payment, profile, schedule, and team updates. SMS should be reserved for urgent or time-sensitive event-day changes. Exact triggers, consent, and opt-out rules remain to be approved.
+
+Alternative notification models considered:
+
+- **Minimal:** Email only, with critical information also visible on the dashboard. Lowest complexity and cost.
+- **Balanced (recommended):** In-app notifications and email for normal updates, with SMS only for urgent event-day changes.
+- **High-touch:** In-app, email, and SMS for most milestones. More immediate, but more expensive and more likely to feel intrusive.
+
+## Homepage Features
+
+### Event Countdown
+
+The homepage should include a countdown to the tournament start, showing days, hours, minutes, and seconds. It should use the configured event date and time rather than hard-coded values. When the countdown reaches zero, it should be replaced by a relevant event-day state instead of displaying negative values or remaining at zero.
+
+### Partnership Call to Action
+
+The homepage and sponsor page should contain a visible partnership call to action. Use original, direct wording such as **Bli samarbeidspartner** rather than copying the reference website. The action should lead to the contact page or a future partnership enquiry form.
+
+Supporting copy should briefly explain that companies can contribute through sponsorship, participant packages, prizes, stands, or other event collaboration. Final text will be written after the sponsorship packages are confirmed.
+
+## Contact Page
+
+A public Contact page is required. It should identify Marcus Grude Grodem as the organizer and provide:
+
+- **Email:** [marcus.grude.grodem@gmail.com](mailto:marcus.grude.grodem@gmail.com)
+- **Phone:** [+47 960 16 750](tel:+4796016750)
+
+The email address and telephone number should be clickable. The page should support questions from students, participating companies, and potential sponsors. A contact form can be considered later, but direct contact details are sufficient for the first release and avoid unnecessary storage of enquiry data.
 
 ## Questions to Answer Before Development
 
