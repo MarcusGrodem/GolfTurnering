@@ -37,6 +37,21 @@ The 72-player field is a planning assumption, not a confirmed capacity. Sola GK 
 
 At the stated food range, the working total varies from approximately **NOK 175,780 to NOK 183,700**, including the corresponding 10% contingency.
 
+### Prospective Zip / Jåttå Bryggeri Sponsorship
+
+Zip / Jåttå Bryggeri may become an afterparty sponsor. The preliminary concept is access to its venue and beverages at purchase cost. No saving or sponsorship value is included in the current budget because commercial terms have not been confirmed.
+
+Once an offer is received, update the budget with separate values for:
+
+- Venue rental and included equipment or AV.
+- Beverage quantities and purchase prices.
+- Staffing, security, cleaning, and serving costs.
+- Licence or compliance costs and responsibility.
+- Transport implications between Sola GK and the afterparty venue.
+- Cash sponsorship and the fair value of any in-kind contribution, recorded separately.
+
+The existing NOK 10,000 dinner/afterparty room and AV allowance should remain until the venue terms are documented.
+
 ## What Each Place Costs
 
 The direct cost of adding one participant is currently approximately:
@@ -93,7 +108,7 @@ Ask Sola GK and other suppliers about the following before locking the budget:
 3. Minimum player or green-fee commitment and maximum shotgun capacity.
 4. Deposit, cancellation, weather, rescheduling, and final headcount terms.
 5. Food minimum spend, service staff, room hire, table setup, coffee, water, and dietary requirements.
-6. Beverage and alcohol costs, serving licence, security, age controls, and whether an afterparty can remain at the clubhouse.
+6. Beverage and alcohol costs, serving licence, security, age controls, and whether the afterparty will be held at Sola GK or through the prospective Zip / Jåttå Bryggeri partnership.
 7. Range balls, warm-up area, rental clubs, golf carts, and whether students pay rentals directly.
 8. Tournament software, handicap verification, live scoring, and results administration.
 9. Signage installation, sponsor stands, power, tents, tables, and bad-weather alternatives.

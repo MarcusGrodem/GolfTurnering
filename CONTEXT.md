@@ -124,6 +124,12 @@ Packages may be structured around clear participation and visibility benefits, f
 
 Potential benefits include company representatives in the tournament, a pre-start stand, company profile visibility on the website, access to opted-in student profiles, dinner attendance, branding at sponsored holes or competitions, and recognition during the prize ceremony.
 
+### Prospective Zip / Jåttå Bryggeri Partnership
+
+Zip / Jåttå Bryggeri is a prospective sponsor and afterparty partner. The working concept is that the partnership could provide access to its venue and beverages at purchase cost. More information and a formal offer are still required, so the arrangement must not yet be treated as confirmed sponsorship income or a guaranteed budget saving.
+
+Items to confirm include venue rental price, date and capacity, what spaces and equipment are included, beverage assortment and purchase prices, minimum purchase requirements, staffing, security, cleaning, serving licence and responsibility, age controls, opening hours, transport from Sola GK, cancellation terms, and sponsor benefits.
+
 Access to student data must not be sold as unrestricted access. It should depend on student consent, company verification, clear purpose limitations, and appropriate privacy controls.
 
 ## Measures of Success

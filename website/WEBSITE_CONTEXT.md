@@ -142,7 +142,7 @@ Verified company users should be able to browse and search students using approp
 
 The exact filters and whether students can browse other student profiles remain open decisions.
 
-Company favorites must be anonymous to students and other companies. A favorite should only act as a preference signal for team allocation, increasing the chance that a company representative and the student are placed on the same scramble team. It must not guarantee a pairing, expose recruitment interest, or override tournament constraints such as team size and handicap balance. The organizer's access to favorite data and the exact weighting remain to be decided.
+Company favorites belong to the individual company user rather than a shared company list. They must be anonymous to students and other companies, while the organizer can inspect them for administration and team review. A company user may optionally add a private internal note to a favorite; the note is visible only to that user and the organizer. A favorite should act as a preference signal for team allocation, increasing the chance that the relevant company representative and student are placed on the same scramble team. It must not expose recruitment interest or override tournament constraints such as team size and handicap balance.
 
 ## Event Features
 
@@ -216,7 +216,7 @@ Direct messaging, a custom-built scoring system, and year-round job listings can
 6. **Recent graduates:** A participant is considered a recent graduate for up to two years after completing their education.
 7. **Eligibility verification:** Formal proof of active-student or recent-graduate status is not required. Applicants should declare their current study or graduation details, and the organizer retains the ability to review suspicious or inaccurate registrations.
 8. **Company access period:** Verified companies can access participating student profiles and shared CVs until one week after the tournament ends. Access must then be revoked automatically. Authorized company users may view and download shared CVs during this period. Because downloaded copies cannot technically be revoked, companies must accept purpose limitation, retention, deletion, and non-sharing terms before access; downloads should be logged and clearly attributed where practical.
-9. **Refund policy:** Cancellation, no-show, postponement, weather, and refund rules will be decided later and must be published before payments open.
+9. **Refund policy:** A student who withdraws before the 72-hour registration deadline should receive a full refund. Rules for later withdrawal, no-show, postponement, weather, and event cancellation remain undecided and must be published before payments open.
 10. **Sponsorship places:** Sponsorship packages should include a fixed standard number of player places. Organizers must be able to override the number for an individually negotiated package without changing the published standard package.
 11. **Team composition:** Team size should remain flexible until actual registration numbers are known. Allocation should use three- or four-player teams as required while targeting approximately 25% company representatives and 75% students across the field. A four-player team would normally contain one company representative and three students, but exact composition is not guaranteed.
 12. **Players without an official handicap:** They may participate and should use handicap 54 for team allocation and scoring calculations, subject to final confirmation of the competition rules with Sola GK.
@@ -231,8 +231,22 @@ Direct messaging, a custom-built scoring system, and year-round job listings can
 21. **Rental clubs:** Students can indicate that they need rental clubs during registration. The organizer should include this need in the Sola GK export, while availability, collection, and payment are handled directly by Sola GK.
 22. **Dietary information:** Every participant must answer the dietary-requirements and allergy questions, including explicitly selecting "none" when they have no requirements. Access must be restricted to organizers and relevant food-service personnel.
 23. **Check-in:** A participant list in the admin area is sufficient. The organizer will manually mark arrivals; participant-facing QR codes or self-service digital check-in are not required.
+24. **Registration deadline:** Student registration closes 72 hours before the configured tournament start time.
+25. **Player-data lock:** Golf handicap and team-allocation information lock when registration closes. Later corrections require an organizer action and should trigger a team review.
+26. **Team-generation schedule:** Initial teams should be generated immediately after the 72-hour deadline and reviewed and published within approximately 24 hours, targeting publication around 48 hours before the tournament.
+27. **Withdrawal:** Participants cannot cancel their place through self-service. They must contact the organizer, who records the withdrawal, handles any refund decision, and offers the place to the waiting list when appropriate.
+28. **Dinner and afterparty guests:** The working rule is that dinner and afterparty access is limited to registered players. Additional guests and dinner-only attendance are not included unless the organizer changes the event policy before registration opens.
+29. **Emergency contacts:** Participants are not required to provide a personal emergency-contact name or telephone number.
+30. **Company-player deadline:** Company players should ideally complete their registration no later than 72 hours before the tournament, matching the student-registration deadline. The organizer must be able to handle justified late company changes manually.
+31. **Waiting-list offer:** A student offered an available place from the waiting list has 24 hours to complete payment. If payment is not completed, the offer expires and the place can be offered to the next eligible student.
+32. **Late team replacement:** If a player withdraws after teams have been published, the organizer can admit a student from the waiting list and regenerate or manually adjust the affected team. Any affected players must be notified of the updated team or starting hole.
+33. **Rental-club changes:** Rental-club requirements are not locked at the 72-hour registration deadline. Participants can update the requirement while the event workflow remains open, but the website must state that late requests depend on Sola GK availability.
+34. **Dietary registration:** Dietary requirements and allergies are collected when the participant creates and completes their user profile. No separate post-deadline change workflow is required for the first release.
+35. **Company favorites:** The first release should not impose a fixed numerical limit on how many students a company user can favorite. Each company user has an individual list and may optionally attach a private note. The organizer can see favorites and notes, but students, other company users, and other companies cannot. Favorites lock when approved teams are published. After handicap balance and team constraints are satisfied, the algorithm should try to give each company representative at least one pairing with a student they favorited when feasible.
+36. **Platform CV retention:** A student's CV is not automatically deleted from the platform when company access ends one week after the tournament. It remains privately associated with the retained student account until the student deletes it or requests account deletion, subject to the final privacy and retention policy. Sponsor access must still end automatically after one week.
+37. **Golf authority:** The organizer and Sola GK should jointly confirm handicap treatment, competition rules, and score calculation before registration opens. The website must reflect the agreed rules and identify who handles rule questions during the tournament.
 
-The company-favorite limit, waiting-list offer deadline, post-event retention of privately stored CVs, authority for final scramble and handicap rules, and exact urgent-notification channels are intentionally deferred decisions. They must be settled before the related workflows are implemented or registration opens.
+The cancellation and weather policy, rules for late withdrawal and no-shows, and exact urgent-notification channels are intentionally deferred decisions. These topics are not a current planning priority and should not block work on the first website concept, but the applicable terms must be settled before student payments open.
 
 ### Sponsorship Capacity and Course Activities
 
@@ -245,6 +259,8 @@ The company-favorite limit, waiting-list offer deadline, post-event retention of
 - Specific-hole allocation must be approved and managed by the organizer in coordination with Sola GK; sponsors cannot claim a hole directly through self-service booking.
 - Sponsorship packages and prices should not be published as self-service products on the website. Interested companies should use the partnership call to action and contact the organizer for an individual offer.
 - A company profile and its users may be prepared in advance, but sponsor access to student profiles and CVs must remain disabled until the organizer records the sponsorship agreement as paid.
+
+**Prospective partner lead:** Zip / Jåttå Bryggeri may become an afterparty sponsor, potentially providing a venue and beverages at purchase cost. This is not confirmed and must not appear in the public sponsor list until an agreement is approved. If confirmed, the admin should support identifying it as the afterparty partner and linking its profile from the relevant program item.
 
 ### Recommended Student Payment Approach
 
@@ -291,7 +307,7 @@ No undocumented scraping or duplicate scoring system should be used. The website
 - Dinner seating is unassigned; participants choose their own seats.
 - The organizer can build and publish a structured event program in the admin area. Each item should support a time, title, location, short description, ordering, and current status or update.
 - The result experience should expose both gross and net team standings from GolfBox when the available GolfBox result view or approved integration supports them.
-- Winners of closest to the pin, longest drive, and straightest drive should be published on the event result page and retained in the yearly archive.
+- Winners of closest to the pin, longest drive, and straightest drive should be published on the event result page. The yearly public archive may retain the competition and winning measurement or summary, but not the winner's name.
 - The organizer must be able to enter or correct side-competition winners manually if GolfBox does not supply those results.
 
 ## Confirmed Account Administration
@@ -443,6 +459,16 @@ Fields such as study program, interests, and place of origin are still personal 
 4. Company user accounts and editable company profiles are event-specific and should not remain active for reuse the following year. The organizer creates new company accounts and obtains updated profile information for each event. An approved, limited public record of previous participating companies may still remain in the historical event archive.
 5. A dedicated global emergency switch for all company access is not required in the first admin interface. The organizer must still be able to suspend individual company users and companies, and ordinary incident-response controls must remain available at the system or authentication-provider level.
 
+## Confirmed Archive Scope
+
+1. Public yearly archives must not expose player names, team membership, or named individual scorecards. Published result summaries may show placements and scores only in a form that does not identify participants.
+2. The archive may include approved photo galleries from the golf tournament, dinner, and afterparty. Identifiable images must follow the recorded photography choices and image-use permissions.
+3. Each archive should recognize the participating companies and sponsors for that year.
+4. A next-year interest form is a later feature and is not required for the first release.
+5. Emailing previous student users when a future registration opens is also deferred until the first event has demonstrated that the concept should continue.
+
+The immediate priority is delivering and evaluating the current-year event. Future-year growth features must not delay registration, payment, profiles, company discovery, team allocation, administration, or event-day readiness for the first tournament.
+
 ## Confirmed Contact and Matching Rules
 
 1. Verified sponsor users with active access may see the confirmed student's email address and telephone number in addition to the shared profile and CV. Students must be informed of this disclosure before confirming participation.
@@ -518,6 +544,41 @@ A public Contact page is required. It should identify Marcus Grude Grodem as the
 - **Phone:** [+47 960 16 750](tel:+4796016750)
 
 The email address and telephone number should be clickable. The page should support questions from students, participating companies, and potential sponsors. A contact form can be considered later, but direct contact details are sufficient for the first release and avoid unnecessary storage of enquiry data.
+
+## Confirmed Testing and Launch Approach
+
+1. **Registration opening:** No fixed lead time has been selected. Student registration may open as soon as the production website, event information, payment setup, legal texts, and required operational agreements are ready. The opening date and time must be configurable in the admin area.
+2. **User testing:** A separate pilot group of students and companies is not required. Marcus Grude Grodem will perform the first-release acceptance testing as organizer.
+3. **Environments:** A separate non-public test or staging environment is required so changes and integrations can be checked before production publication.
+4. **Full rehearsal:** Before registration opens, the organizer must complete an end-to-end rehearsal using test accounts. It must cover student and company flows, mandatory profile and PDF uploads, Vipps test payment, immediate confirmation, capacity and waiting list, email templates, company access, CV viewing and download, favorites, team generation, admin actions, and Excel/CSV exports.
+5. **Maintenance ownership:** Marcus Grude Grodem is responsible for coordinating website maintenance, updates, and issue resolution after launch. External hosting and software vendors may operate parts of the system, but the organizer remains the operational owner and point of contact.
+6. **Final approval:** Marcus Grude Grodem has final approval over design, content, event configuration, privacy implementation, payment readiness, and production launch.
+7. **Launch blockers:** Production registration must not open while any critical workflow is failing. Payment verification, access control, CV privacy, confirmation email, capacity enforcement, waiting-list behavior, admin access, and required exports are launch-blocking checks.
+8. **Browser and device testing:** Core workflows must be tested on representative mobile and desktop sizes in the current major browsers before launch. Responsive layout, keyboard use, accessibility, file upload, payment redirects, and event-day information are included.
+9. **Initial data:** The production database starts without existing student, company, or registration records. No legacy-data import is required for the first event.
+10. **Operational fallback:** The organizer will maintain manual participant and operational lists for use if Vipps, email, GolfBox, or the website is unavailable. The admin area must support preparing current exports before the event. Manual lists must be protected appropriately and must exclude private recruitment documents unless specifically required.
+11. **Operational monitoring:** Marcus Grude Grodem will monitor the service during registration launch and on the event day. This means checking registration and payment outcomes, email delivery, authentication, capacity, integrations, and incoming support messages, and coordinating a response when a service fails.
+12. **Post-event evaluation:** Confirmed students and company users should receive a short digital evaluation after the tournament. The forms may use role-specific questions but should share comparable overall-event measures.
+13. **Issue reporting:** A dedicated in-app technical or content-reporting workflow is not required. Users should report problems through the public contact email or telephone number, and the organizer handles them through the admin tools.
+14. **Service-status banner:** The organizer can publish a prominent, time-limited operational message across the website when payment, email, GolfBox, registration, or another important service is disrupted. The banner should support severity, Norwegian and English text, an optional link, and manual dismissal or expiry.
+
+Production must not open merely because the interface appears complete. Payment verification, access control, document privacy, backups, email delivery, exports, and recovery procedures must also pass the agreed checks.
+
+### First-Year Success Measures
+
+The post-event review should prioritize whether the concept worked and whether participants valued it:
+
+- Overall satisfaction among students and company representatives.
+- Percentage who would participate again.
+- Percentage who would recommend the event to an eligible student or company.
+- Satisfaction with golf, networking, company discovery, organization, dinner, and afterparty.
+- Number and perceived quality of new student-company connections.
+- Follow-up conversations, interviews, internships, or job opportunities reported after the event.
+- Registration fill rate, attendance, no-show rate, and waiting-list conversion.
+- Sponsor satisfaction and stated intention to return.
+- Operational incidents involving registration, payment, access, communication, or event-day information.
+
+The evaluation should favor a short set of rating questions plus optional comments so completion remains high. Results should be reviewed in aggregate and used to prioritize improvements for the next yearly event.
 
 ## Questions to Answer Before Development
 
