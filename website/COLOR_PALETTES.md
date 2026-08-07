@@ -1,6 +1,6 @@
 # Color Palette Options
 
-These palettes are starting points for `[Event Name]`. They are deliberately different so the final direction can be selected before the website is designed. Colors must be tested in real components and verified for WCAG contrast before implementation.
+These palettes are starting points for **Hjemmebane**. They are deliberately different so the final direction can be selected before the website is designed. Colors must be tested in real components and verified for WCAG contrast before implementation.
 
 ## Palette 1: Fairway Classic
 

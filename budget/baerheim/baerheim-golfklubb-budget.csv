@@ -1,0 +1,17 @@
+Category,Cost item,Quantity,Unit cost NOK,Estimated total NOK,Status,Notes
+Venue,Fixed venue charge,1,0,0,Unconfirmed,"No separate charge quoted; confirm minimum event and dinner spend"
+Golf,Green fees and tournament setup,72,800,57600,Quoted,"Includes tournament setup and shotgun start; confirm VAT"
+Food,Dinner,72,750,54000,Quoted plus VAT assumption,"NOK 600 plus assumed 25% VAT; minimum 40"
+Food,"Baguette, chocolate and soft drink",72,137.50,9900,Quoted plus VAT assumption,"NOK 110 plus assumed 25% VAT"
+Evening,Function room and projector,1,0,0,Appears included,"Confirm minimum spend, cleaning and staffing"
+Prizes,Competition and main prizes,1,0,0,Sponsor supplied,"Non-cash prizes only; no event expense"
+Production,"Signs, badges and stand materials",1,3000,3000,Estimate,"Course competition equipment and outdoor furniture available"
+Media,Photographer/content,1,8000,8000,Estimate,Optional
+Compliance,"Insurance, first aid and permits",1,5000,5000,Estimate,"Confirm organizer and venue coverage"
+Digital,"Website, payment and administration",1,5000,5000,Estimate,"Excludes development labor"
+Operations,Event staff/volunteer expenses,1,4000,4000,Estimate,"Venue assists with start lists and results"
+Logistics,Local transport and miscellaneous,1,3000,3000,Estimate,"Planning allowance"
+Golf,Range balls,72,60,4320,Quoted,"30 balls per player; optional allocation"
+Food,Dinner soft drinks and coffee,72,100,7200,Estimate,"Must be purchased from venue; obtain prices"
+Reserve,Contingency,1,16102,16102,Calculated,"10% of subtotal"
+TOTAL,Working total,,,177122,Calculated,"72 players; conservative VAT assumptions"

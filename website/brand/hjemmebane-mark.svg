@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Hjemmebane logo mark</title>
+  <desc id="desc">An H-shaped fairway with a golf flag.</desc>
+  <path fill="#18543F" d="M12 8h10v19h20V8h10v48H42V37H22v19H12z"/>
+  <path fill="#DC604D" d="M42 8h15L52 15l5 7H42z"/>
+</svg>

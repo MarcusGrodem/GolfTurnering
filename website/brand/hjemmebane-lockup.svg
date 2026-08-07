@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" role="img" aria-labelledby="title desc">
+  <title id="title">Hjemmebane</title>
+  <desc id="desc">Hjemmebane wordmark with an H-shaped golf flag.</desc>
+  <g transform="translate(8 8)">
+    <path fill="#18543F" d="M4 0h10v23h20V0h10v56H34V33H14v23H4z"/>
+    <path fill="#DC604D" d="M34 0h18l-6 8 6 8H34z"/>
+  </g>
+  <text x="78" y="54" fill="#17231E" font-family="'Bricolage Grotesque', sans-serif" font-size="48" font-weight="700" letter-spacing="0">Hjemmebane</text>
+</svg>

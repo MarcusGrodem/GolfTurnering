@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The website supports the event before and during each yearly tournament. The final event and website name has not been selected; use `[Event Name]` as a placeholder until it is decided. The website should serve two primary user groups: students and participating companies.
+The website supports the yearly tournament **Hjemmebane** before and during the event. The website should serve two primary user groups: students and participating companies.
 
 The platform has two main purposes:
 
@@ -428,7 +428,7 @@ Before a student can pay and receive a confirmed place, the profile must contain
 
 ## Confirmed Product Decisions
 
-1. **Working name:** Use `[Event Name]` as a placeholder. The final name will be selected later.
+1. **Event and website name:** The name is **Hjemmebane**.
 2. **Primary student action:** Create a student profile, explore participating companies, and understand what each company does and looks for in students.
 3. **Primary company action:** Browse participating students and privately favorite interesting candidates. Favorites anonymously increase the chance of sharing a scramble team.
 4. **First-release scope:** The complete core platform defined in Required First Release must be available for the first tournament.
@@ -489,7 +489,7 @@ File-size limits, malware scanning, replacement behavior, and final retention pe
 
 ## Confirmed Design Direction
 
-1. **Brand material:** No logo, color palette, typography, or other visual identity exists yet. These should be created after the final event name is selected.
+1. **Brand material:** The initial visual identity is defined in `website/BRAND_IDENTITY.md`, with working logo assets in `website/brand/`. It should be tested in actual website components before final production approval.
 2. **Visual balance:** The identity should combine golf and professional networking, weighted approximately 60% toward golf and 40% toward networking.
 3. **Tone:** The website should feel fairly formal and credible while making it clear that the event is social and primarily intended to be fun.
 4. **Visual reference:** Review [sologsving.no](https://sologsving.no/) and the `sologsving` Instagram account together with the organizer when design work begins. Use the website as functional inspiration for its event countdown, sponsor-logo strip, and partnership call to action. Do not copy its wording, layout, branding, imagery, or visual identity.
@@ -586,7 +586,7 @@ These questions should be answered before the website architecture and visual de
 
 ### Product and Scope
 
-1. What is the final event and website name?
+1. Is **Hjemmebane** available for the desired domain, social accounts, and relevant trademark classes?
 2. What is the single most important action for a student on the website?
 3. What is the single most important action for a company?
 4. Which features are required for the first tournament, and which belong in later releases?

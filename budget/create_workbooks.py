@@ -164,7 +164,13 @@ def setup_sponsorship(ws, packages):
     ws["A13"] = "Unallocated / overallocated places"
     ws["E13"] = "=E12-E10"
     ws["A14"] = "Direct event cost per player"
-    ws["E14"] = "=SUMIF(Costs!B5:B18,\"Green fees\",Costs!D5:D18)+SUMIF(Costs!B5:B18,\"Dinner/food\",Costs!D5:D18)+SUMIF(Costs!B5:B18,\"On-course refreshments\",Costs!D5:D18)"
+    ws["E14"] = (
+        '=SUMIF(Costs!B5:B18,"Green fees",Costs!D5:D18)'
+        '+SUMIF(Costs!B5:B18,"Dinner/food",Costs!D5:D18)'
+        '+SUMIF(Costs!B5:B18,"On-course refreshments",Costs!D5:D18)'
+        '+SUMIF(Costs!B5:B18,"Range balls",Costs!D5:D18)'
+        '+SUMIF(Costs!B5:B18,"Dinner soft drinks and coffee",Costs!D5:D18)'
+    )
     currency_cells(ws, [f"B{row}" for row in range(5, 10)] + [f"F{row}" for row in range(5, 11)] + ["E14"])
     ws.conditional_formatting.add("E13", CellIsRule(operator="lessThan", formula=["0"], fill=PatternFill("solid", fgColor=RED)))
     ws.freeze_panes = "A5"
@@ -276,6 +282,57 @@ build(
     sola_packages,
 )
 
-for workbook_path in (OUTPUT_DIR / "event-budget-template.xlsx", OUTPUT_DIR / "sola-gk-budget.xlsx"):
+baerheim_amounts = [
+    (1, 0, "No separate venue charge quoted; minimum spend must be confirmed"),
+    (72, 800, "Quoted per player; includes tournament setup and shotgun start"),
+    (72, 750, "NOK 600 plus assumed 25% VAT; minimum 40 guests"),
+    (72, 137.50, "Baguette, chocolate and soft drink at NOK 110 plus assumed 25% VAT"),
+    (1, 0, "Function room and projector appear available; confirm minimum spend"),
+    (1, 0, "Non-cash items supplied by sponsors"),
+    (1, 3000, "Reduced allowance; course equipment and outdoor furniture are available"),
+    (1, 8000, "Optional planning allowance"),
+    (1, 5000, "Confirm organizer and venue coverage"),
+    (1, 5000, "Excludes development labor"),
+    (1, 4000, "Reduced allowance because venue assists with tournament administration"),
+    (1, 3000, "Planning allowance"),
+    (72, 60, "Optional 30-ball warm-up allocation per player"),
+    (72, 100, "Allowance for required venue-purchased soft drinks and coffee at dinner"),
+]
+baerheim_cost_names = cost_names[:-2] + [
+    ("Golf", "Range balls"),
+    ("Food", "Dinner soft drinks and coffee"),
+]
+baerheim_costs = [
+    (category, name, quantity, unit_cost, note)
+    for (category, name), (quantity, unit_cost, note) in zip(baerheim_cost_names, baerheim_amounts)
+]
+baerheim_packages = [
+    ("Title Partner", 30000, 4, 1),
+    ("Company Partner", 15000, 2, 5),
+    ("Supporting Partner", 7500, 1, 4),
+    ("Additional Package", 0, 0, 0),
+    ("Additional Package", 0, 0, 0),
+]
+
+build(
+    OUTPUT_DIR / "baerheim-golfklubb-budget.xlsx",
+    {
+        "event_name": "Hjemmebane 2027",
+        "venue": "Bærheim Golfpark / Sandnes Golfklubb",
+        "players": 72,
+        "company_share": 0.25,
+        "contingency": 0.10,
+        "sponsorship": 135000,
+        "student_fee": 800,
+    },
+    baerheim_costs,
+    baerheim_packages,
+)
+
+for workbook_path in (
+    OUTPUT_DIR / "event-budget-template.xlsx",
+    OUTPUT_DIR / "sola-gk-budget.xlsx",
+    OUTPUT_DIR / "baerheim-golfklubb-budget.xlsx",
+):
     load_workbook(workbook_path)
     print(f"Created and validated {workbook_path.name}")

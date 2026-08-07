@@ -1,8 +1,8 @@
-# Stavanger Student Golf Invitational
+# Hjemmebane
 
 ## Project Summary
 
-The Stavanger Student Golf Invitational is a yearly, one-day golf and networking event for ambitious students and businesses in the Stavanger region. It combines an informal, fun golf tournament with structured opportunities for recruitment, professional networking, and community building.
+Hjemmebane is a yearly, one-day golf and networking event for ambitious students and businesses in the Stavanger region. It combines an informal, fun golf tournament with structured opportunities for recruitment, professional networking, and community building.
 
 The event is intended to strengthen the connection between Stavanger-area employers and students who study locally or have ties to the region. A central motivation is that many young adults leave Stavanger to study or work elsewhere. The event should help students discover relevant local opportunities and help businesses build relationships with prospective employees.
 
