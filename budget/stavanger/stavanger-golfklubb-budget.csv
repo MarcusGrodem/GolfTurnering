@@ -1,0 +1,17 @@
+Category,Cost item,Quantity,Unit cost NOK,Estimated total NOK,Status,Notes
+Venue,Combined event baseline,1,144000,144000,Provided approximate,"Menu-dependent combined starting estimate; request breakdown and VAT status"
+Golf,Green fees,1,0,0,Included,"Included in combined estimate; exact rate and scope not itemized"
+Food,Dinner/food,1,0,0,Included,"Included in combined estimate; Farmhouse ca. NOK 575 pp or café/grill ca. NOK 250 pp"
+Food,Start package (food package),90,150,13500,Optional quote,"Approx. NOK 150 per participant; 90-player working case"
+Evening,Dinner/afterparty room and AV,1,0,0,Needs quote,"Farmhouse is operated externally by Cosba AS"
+Prizes,Competition and main prizes,1,0,0,Sponsor supplied,"Non-cash prizes only; no event expense"
+Production,"Signs, badges, scorecards and stands",1,5000,5000,Estimate,"Planning allowance carried over from Sola template"
+Media,Photographer/content,1,8000,8000,Estimate,Optional
+Compliance,"Insurance, first aid and permits",1,5000,5000,Estimate,"Confirm organizer and venue coverage"
+Digital,"Website, payment and administration",1,5000,5000,Estimate,"Excludes development labor"
+Operations,Event staff/volunteer expenses,1,6000,6000,Estimate,"Confirm staffing included in club estimate"
+Logistics,Local transport and miscellaneous,1,3000,3000,Estimate,"Planning allowance"
+Other,Dinner beverages,1,0,0,Needs decision,"Not quoted; organizer-paid or participant-paid"
+Other,Other expense,1,0,0,Unused,"Unused allowance"
+Reserve,Contingency,1,18950,18950,Calculated,"10% of subtotal"
+TOTAL,Working total,,,208450,Calculated,"90-player working case; includes optional start packages"

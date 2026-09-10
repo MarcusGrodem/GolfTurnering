@@ -9,6 +9,9 @@ This folder contains the reusable budget model and working venue budgets for Hje
 - `baerheim-golfklubb-budget.xlsx` is the populated Bærheim Golfpark / Sandnes Golfklubb Excel budget for 2027.
 - `baerheim-golfklubb-budget.md` explains the Bærheim quote, assumptions, scenarios, and missing prices.
 - `baerheim-golfklubb-budget.csv` contains the Bærheim cost lines in a spreadsheet-friendly format.
+- `stavanger/stavanger-golfklubb-budget.xlsx` is the populated Stavanger Golfklubb budget for 2027, using the Sola workbook structure.
+- `stavanger/stavanger-golfklubb-budget.md` explains the Stavanger quote, menu alternatives, assumptions, scenarios, and costs that need confirmation.
+- `stavanger/stavanger-golfklubb-budget.csv` contains the Stavanger cost lines in a spreadsheet-friendly format.
 - `create_workbooks.py` regenerates the template and all populated Excel workbooks after structural changes to the model.
 
 The Excel files contain four sheets: `Inputs`, `Costs`, `Sponsorship`, and `Scenarios`. Yellow cells are intended for editing; blue and green cells contain calculations and results. Formulas recalculate when the workbook opens in Excel.

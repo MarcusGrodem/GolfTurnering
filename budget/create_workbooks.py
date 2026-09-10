@@ -181,7 +181,7 @@ def setup_sponsorship(ws, packages):
 def setup_scenarios(ws):
     title(ws, "Student Fee Scenarios", "Change sponsorship values in column A to compare the required fee for paying students.")
     header_row(ws, 4, ["Cash sponsorship", "Working total", "Remaining funding", "Paying students", "Break-even fee per student", "Notes"])
-    values = [0, 50000, 75000, 100000, 125000, 135000]
+    values = [0, 50000, 75000, 100000, 125000, 140000]
     for row, value in enumerate(values, 5):
         ws.cell(row, 1, value)
         ws.cell(row, 2, "=Costs!E21")
@@ -259,9 +259,9 @@ sola_costs = [
     for (category, name), (quantity, unit_cost, note) in zip(cost_names, sola_amounts)
 ]
 sola_packages = [
-    ("Title Partner", 30000, 4, 1),
-    ("Company Partner", 15000, 2, 5),
-    ("Supporting Partner", 7500, 1, 4),
+    ("Main Partner", 50000, 4, 1),
+    ("Company Partner", 30000, 2, 1),
+    ("Supporting Partner", 15000, 1, 4),
     ("Additional Package", 0, 0, 0),
     ("Additional Package", 0, 0, 0),
 ]
@@ -275,7 +275,7 @@ build(
         "players": 72,
         "company_share": 0.25,
         "contingency": 0.10,
-        "sponsorship": 135000,
+        "sponsorship": 140000,
         "student_fee": 900,
     },
     sola_costs,
@@ -307,9 +307,9 @@ baerheim_costs = [
     for (category, name), (quantity, unit_cost, note) in zip(baerheim_cost_names, baerheim_amounts)
 ]
 baerheim_packages = [
-    ("Title Partner", 30000, 4, 1),
-    ("Company Partner", 15000, 2, 5),
-    ("Supporting Partner", 7500, 1, 4),
+    ("Main Partner", 50000, 4, 1),
+    ("Company Partner", 30000, 2, 1),
+    ("Supporting Partner", 15000, 1, 4),
     ("Additional Package", 0, 0, 0),
     ("Additional Package", 0, 0, 0),
 ]
@@ -322,7 +322,7 @@ build(
         "players": 72,
         "company_share": 0.25,
         "contingency": 0.10,
-        "sponsorship": 135000,
+        "sponsorship": 140000,
         "student_fee": 800,
     },
     baerheim_costs,

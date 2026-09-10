@@ -75,9 +75,9 @@ Assuming 54 paying students and the full NOK 179,740 working cost:
 | 75,000 | 104,740 | 1,940 |
 | 100,000 | 79,740 | 1,477 |
 | 125,000 | 54,740 | 1,014 |
-| 135,000 | 44,740 | 829 |
+| 140,000 | 39,740 | 736 |
 
-A practical initial target is **NOK 125,000-135,000 in cash sponsorship**, allowing a student price near **NOK 850-1,050** while retaining the 10% contingency. All prizes are non-cash items supplied by sponsors and therefore have no expense or cash-sponsorship value in this budget.
+A practical initial target is **NOK 140,000 in cash sponsorship**, allowing a student price near **NOK 800-900** while retaining the 10% contingency. All prizes are non-cash items supplied by sponsors and therefore have no expense or cash-sponsorship value in this budget.
 
 ## Draft Sponsorship Packages
 
@@ -85,17 +85,18 @@ These prices are starting points for testing with prospective sponsors. Benefits
 
 | Package | Price | Included company players | Suggested availability | Main benefits |
 |---|---:|---:|---:|---|
-| Title Partner | 30,000 | 4 | 1 | Leading event visibility, premium stand position, website profile, dinner, competition or dinner naming |
-| Company Partner | 15,000 | 2 | 5 | Stand, website profile, golf and dinner, sponsor recognition |
-| Supporting Partner | 7,500 | 1 | 4 | Website profile, golf and dinner, shared sponsor recognition |
+| Main Partner | 50,000 | 4 | 1 | One of the main sponsors, leading event visibility, premium stand position, website profile, dinner, competition or dinner association |
+| Company Partner | 30,000 | 2 | 1 | Stand, website profile, golf and dinner, sponsor recognition |
+| Supporting Partner | 15,000 | 1 | 4 | Website profile, golf and dinner, shared sponsor recognition |
 
 Selling the example allocation produces:
 
-- 18 company places: `4 + (5 x 2) + (4 x 1)`.
-- NOK 135,000 cash sponsorship: `30,000 + (5 x 15,000) + (4 x 7,500)`.
-- A break-even student fee of approximately NOK 829.
+- 10 company places: `4 + 2 + (4 x 1)`.
+- NOK 140,000 cash sponsorship: `50,000 + 30,000 + (4 x 15,000)`.
+- Eight company-player places remain available for additional agreements within the overall capacity.
+- A break-even student fee of approximately NOK 736.
 
-The clean public price could be **NOK 900 per student**. At full attendance and NOK 135,000 sponsorship, this creates a NOK 3,860 buffer above the already-contingent budget. The final fee must be recalculated after firm quotes and sponsor commitments.
+The clean public price could be **NOK 900 per student**. At full attendance and NOK 140,000 sponsorship, this creates a NOK 8,860 buffer above the already-contingent budget. The final fee must be recalculated after firm quotes and sponsor commitments.
 
 Do not promise unrestricted CV access as a package benefit. Company access should only cover profiles and documents students deliberately share with verified company users, for a defined period and recruitment purpose.
 

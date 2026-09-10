@@ -85,9 +85,9 @@ Assuming 54 paying students and the full NOK 177,122 working cost:
 | 75,000 | 102,122 | 1,891 |
 | 100,000 | 77,122 | 1,428 |
 | 125,000 | 52,122 | 965 |
-| 135,000 | 42,122 | 780 |
+| 140,000 | 37,122 | 687 |
 
-Using the existing draft sponsorship allocation of NOK 135,000, a provisional student fee of **NOK 800** produces NOK 43,200 in student revenue and a projected NOK 1,078 buffer above the budget, which already includes 10% contingency.
+Using the revised initial sponsorship allocation of NOK 140,000, a provisional student fee of **NOK 800** produces NOK 43,200 in student revenue and a projected NOK 6,078 buffer above the budget, which already includes 10% contingency.
 
 Do not finalize the NOK 800 student fee until VAT-inclusive catering prices, minimum spends, and beverage costs are confirmed.
 
@@ -97,10 +97,12 @@ For direct comparison with the Sola GK scenario, the same working package alloca
 
 | Package | Price | Included company players | Suggested availability | Cash revenue |
 |---|---:|---:|---:|---:|
-| Title Partner | 30,000 | 4 | 1 | 30,000 |
-| Company Partner | 15,000 | 2 | 5 | 75,000 |
-| Supporting Partner | 7,500 | 1 | 4 | 30,000 |
-| **Total** |  | **18** | **10 packages** | **135,000** |
+| Main Partner | 50,000 | 4 | 1 | 50,000 |
+| Company Partner | 30,000 | 2 | 1 | 30,000 |
+| Supporting Partner | 15,000 | 1 | 4 | 60,000 |
+| **Initial sales mix** |  | **10** | **6 packages** | **140,000** |
+
+Eight company-player places remain available for additional packages or individually negotiated agreements within the planned capacity of 18 company participants.
 
 Package benefits and prices are still planning assumptions. Student-document access must follow the website's authorization, consent, purpose, and time-limit rules rather than being sold as unrestricted access.
 
@@ -126,4 +128,3 @@ Package benefits and prices are still planning assumptions. Student-document acc
 - Require all prizes to be non-cash items supplied directly by sponsors.
 - Confirm sponsor commitments before the one-month venue commitment.
 - Keep the 10% contingency untouched until the final consumption-based invoice is received.
-
